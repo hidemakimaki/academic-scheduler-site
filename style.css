@@ -1,0 +1,36 @@
+:root{
+  --bg:#fbfaf8; --fg:#1f2328; --muted:#5b6570; --rule:#e3e1dd;
+  --accent:#1a5c8a; --card:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15181c; --fg:#e8e6e3; --muted:#9aa4ae; --rule:#2c3238;
+    --accent:#7fb6dd; --card:#1c2026;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.8; font-size:16px;
+}
+.wrap{max-width:46rem; margin:0 auto; padding:3rem 1.25rem 5rem}
+header{border-bottom:1px solid var(--rule); padding-bottom:1.5rem; margin-bottom:2.5rem}
+h1{font-size:1.65rem; margin:0 0 .4rem; letter-spacing:.01em}
+.sub{color:var(--muted); margin:0; font-size:.95rem}
+h2{font-size:1.1rem; margin:2.5rem 0 .75rem; padding-bottom:.35rem; border-bottom:1px solid var(--rule)}
+h2:first-of-type{margin-top:0}
+p{margin:0 0 1rem}
+ul{margin:0 0 1rem; padding-left:1.3rem}
+li{margin-bottom:.4rem}
+a{color:var(--accent)}
+.note{
+  background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--accent);
+  padding:1rem 1.15rem; border-radius:4px; margin:1.5rem 0;
+}
+.note p:last-child{margin-bottom:0}
+table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.93rem}
+th,td{text-align:left; padding:.6rem .5rem; border-bottom:1px solid var(--rule); vertical-align:top}
+th{color:var(--muted); font-weight:600; white-space:nowrap}
+footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.88rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; background:var(--card); border:1px solid var(--rule); border-radius:3px; padding:.1em .35em}

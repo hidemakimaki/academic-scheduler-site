@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>プライバシーポリシー — Academic Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>プライバシーポリシー</h1>
+  <p class="sub">Academic Scheduler</p>
+</header>
+
+<h2>1. 基本方針</h2>
+<p>
+Academic Scheduler（以下「本ツール」）は、開発者本人が研究スケジュールを管理するために
+利用する個人用ツールです。本ツールは、利用者本人の Google カレンダーの情報を、
+計画の作成という目的のためだけに利用します。
+</p>
+
+<h2>2. 取得する情報</h2>
+<p>本ツールは Google カレンダー API を通じて、次の情報を読み取ります。</p>
+<table>
+  <tr><th>情報</th><td>カレンダーの予定の開始時刻・終了時刻・終日かどうか・件名・所属カレンダー名</td></tr>
+  <tr><th>スコープ</th><td><code>https://www.googleapis.com/auth/calendar.readonly</code>（読み取り専用）</td></tr>
+  <tr><th>範囲</th><td>実行時点から概ね90日先までの予定</td></tr>
+</table>
+<p>
+読み取り専用のため、本ツールが予定を作成・変更・削除することはありません。
+</p>
+
+<h2>3. 利用目的</h2>
+<ul>
+  <li>日ごとに研究へ充てられる時間の割合（稼働）を算出するため</li>
+  <li>締切までの残り時間を見積もり、作業計画の案を作るため</li>
+  <li>計画を図（ガントチャート）として表示するため</li>
+</ul>
+<p>これ以外の目的には利用しません。広告配信や行動分析には一切利用しません。</p>
+
+<h2>4. 情報の保存場所</h2>
+<p>
+取得した予定の内容は、利用者本人の端末（Mac）の中だけで処理されます。
+本ツールは外部の解析サービスや広告ネットワークに情報を送信しません。
+</p>
+<table>
+  <tr><th>アクセストークン</th><td>本人の端末内のファイルにのみ保存されます（<code>~/.config/google-calendar-mcp/tokens.json</code> 等）</td></tr>
+  <tr><th>予定の内容</th><td>計算のために一時的にメモリ上で扱うだけで、保存も外部送信も行いません</td></tr>
+</table>
+
+<div class="note">
+  <p>
+    <strong>算出結果の取り扱いについて。</strong>
+    本ツールは計算結果として、日付ごとの稼働の数値（例：<code>2026-11-07 / 0.7 / 午前のみ空き</code>）を、
+    開発者本人が所有する<strong>非公開</strong>のリポジトリに保存します。
+    ここに保存されるのは<strong>空き具合を表す数値と中立的な区分だけ</strong>であり、
+    予定の件名・場所・参加者といった内容は含まれません。
+    これは、予定に関係者を特定しうる情報が含まれうることを踏まえた、意図的な設計です。
+  </p>
+</div>
+
+<h2>5. 第三者への提供</h2>
+<p>
+取得した情報を第三者に販売・譲渡・開示することはありません。
+法令に基づく開示請求があった場合を除き、外部に提供しません。
+</p>
+
+<h2>6. Google ユーザーデータの取り扱い</h2>
+<p>
+本ツールによる Google ユーザーデータの利用は、
+<a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>
+（限定利用要件を含む）に従います。
+</p>
+
+<h2>7. アクセスの取り消しとデータの削除</h2>
+<p>利用者はいつでも、次の方法で本ツールのアクセスを取り消せます。</p>
+<ul>
+  <li>Google アカウントの<a href="https://myaccount.google.com/permissions" rel="noopener">サードパーティ接続</a>の画面から、本ツールのアクセス権を削除する</li>
+  <li>端末内に保存されたトークンファイルを削除する</li>
+</ul>
+<p>
+アクセスを取り消すと、本ツールはカレンダーを読み取れなくなります。
+端末内にはカレンダーの内容が保存されていないため、トークンファイルの削除をもって
+Google から取得した情報は残らない状態になります。
+</p>
+
+<h2>8. お問い合わせ</h2>
+<p>
+本ポリシーに関するお問い合わせ先：<a href="mailto:i.hideaki542@gmail.com">i.hideaki542@gmail.com</a>
+</p>
+
+<h2>9. 改定</h2>
+<p>
+本ポリシーの内容を変更する場合は、このページを更新し、下記の制定日を改めます。
+</p>
+
+<footer>
+  <p>制定日：2026年10月30日 ／ <a href="index.html">Academic Scheduler について</a></p>
+</footer>
+</div>
+</body>
+</html>
